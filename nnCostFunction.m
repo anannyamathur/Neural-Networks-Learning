@@ -79,7 +79,7 @@ t2 = Theta2(:,2:size(Theta2,2));
 Reg = lambda  * (sum( sum ( t1.^ 2 )) + sum( sum ( t2.^ 2 ))) / (2*m);
 % cost function + reg
 J = J + Reg;
-% -------------------------------------------------------------
+
 % Backpropagation
 for t=1:m
 	% forward propagation
@@ -111,7 +111,7 @@ end
 	Theta2_grad(:, 1) = Theta2_grad(:, 1) ./ m;
 	
 	Theta2_grad(:, 2:end) = Theta2_grad(:, 2:end) ./ m + ((lambda/m) * Theta2(:, 2:end));
-% -------------------------------------------------------------
+
 % =========================================================================
 % Unroll gradients
 grad = [Theta1_grad(:) ; Theta2_grad(:)];
