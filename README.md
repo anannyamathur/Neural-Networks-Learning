@@ -7,3 +7,4 @@ Content-
 
 - NNCOSTFUNCTION implements the neural network cost function for a two layer neural network which performs classification
 - RANDINITIALIZEWEIGHTS randomly initialize the weights of a layer with L_in incoming connections and L_out outgoing connections
+- SIGMOIDGRADIENT returns the gradient of the sigmoid function evaluated at z
